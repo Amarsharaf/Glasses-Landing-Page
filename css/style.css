@@ -1,0 +1,242 @@
+:root {
+    --main-color: #333
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    position: relative;
+    box-shadow: 0px 2px 6px 0px #00000063;
+    height: 48px;
+
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 30px;
+    margin: auto;
+}
+header .container .logo {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+header .container .logo img {
+    width: 30px;
+}
+header .container .main-ul {
+    list-style: none;
+    width: 100%;
+}
+header .container .main-ul .li {
+    display: inline-block;
+    margin-left: 10px;
+    color: #666;
+    font-size: 11px;
+    cursor: pointer;
+}
+header .container .main-ul .li::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 3px;
+    background-color: pink;
+    bottom: 7px;
+    width: 0;
+    transition: all .3s;
+}
+header .container .main-ul .li:hover::before {
+    width: 38px;
+}
+header .container i {
+    color: var(--main-color);
+    font-size: 14px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+header .container .small-ul {
+    list-style: none;
+    position: absolute;
+    bottom: -68px;
+    background-color: white;
+    padding: 5px;
+    width: 100px;
+    height: 69px;
+    transition: all .4s;
+    display: none;
+}
+.show {
+    display: block !important;
+}
+header .container .small-ul li {
+    margin-left: 6px;
+    transition: all .3s;
+}
+header .container .small-ul li:hover {
+    background-color: #666;
+}
+.container .small-ul li:first-child {
+    padding-bottom: 12px;
+}
+.search {
+}
+.search input {
+    width: 70%;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid;
+    position: absolute;
+    left: 18%;
+    top: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+.input-show {
+    opacity: 1 !important;
+    left: 18% !important;
+    top: 50px !important;
+}
+.slider {
+
+    padding-bottom: 20px;
+}
+.hero {
+    height: 16rem;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    display: none;
+}
+.active {
+    display: block !important;
+}
+.hero .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    margin-left: 35px;
+    line-height: 2;
+    animation: animation .4s linear .2s backwards  ;
+}
+@keyframes animation {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+.hero span {
+    color: var(--main-color);
+    font-size: 13px;
+}
+.hero h2 {
+    color: var(--main-color);
+    font-size: 38px;
+}
+.hero button {
+    width: fit-content;
+    padding: 7px 20px;
+    background: none;
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 100;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.hero button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.hero .icons {
+    float: right;
+    margin-top: -50px;
+}
+.hero .icons i {
+    margin-right: 15px;
+    background-color: #fff;
+    color: var(--main-color);
+    padding: 5px 10px;
+    font-size: 25px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.hero .icons i:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.offers {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.offers .container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0 10px;
+    padding: 0 50px;
+}
+.offers .container .card {
+    padding: 15px;
+    height: 220px;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.offers .container .one img,
+.offers .container .two img,
+.offers .container .three img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: all .5s;
+}
+.offers .container .card:hover img  {
+    transform: scale(1.1);
+}
+.offers .container .card .text {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+}
+.offers .container .card .text span {
+    font-size: 10px;
+    color: #666;
+}
+.offers .container .card .text h3 {
+    color: var(--main-color);
+    font-size: 14px;
+}
+.offers .container .card .text button {
+    width: fit-content;
+    padding: 7px 20px;
+    background: none;
+    border: 1.5px solid var(--main-color);
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 100;
+    margin-top: 7px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.offers .container .card .text button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
